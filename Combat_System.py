@@ -24,7 +24,7 @@ def combat(HP,enemy_hp):
     if choice == "block":
 
       if enemy_atk <= block:
-        print("the enemy attempted to hit you for", enemy_atk, "damage")
+        print("the enemy hit you for", enemy_atk, "damage")
         enemy_atk = 0
         print("you succesfully blocked the attack")
       if enemy_atk >= block:
@@ -33,14 +33,15 @@ def combat(HP,enemy_hp):
         print("you failed to block, you got hit")
 
     if HP <= 0:
-      print("your HP is at ", HP)
-      print("the enemy's HP is ", enemy_hp)
+      print("your HP is at", HP)
+      print("the enemy's HP is", enemy_hp)
       print("You Lost The Fight")
       break
 
     if enemy_hp <= 0:
-      print("the enemy's HP is ", enemy_hp)
-      print("your HP is at ", HP)
+      print("the enemy's HP is", enemy_hp)
+      print("your HP is at", HP)
       print("You Have Won the Fight")
       break
+
 combat(HP,enemy_hp)
